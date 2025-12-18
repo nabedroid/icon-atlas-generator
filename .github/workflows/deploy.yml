@@ -4,7 +4,11 @@ on:
   push:
     branches: ["main"]
   workflow_dispatch:
-
+    paths-ignore:
+      - '**/README.md'
+      - '.gitignore'
+      - 'docker-compose.yml'
+      - 'Dockerfile'
 permissions:
   contents: read
   pages: write
